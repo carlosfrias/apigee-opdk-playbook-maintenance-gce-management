@@ -1,0 +1,10 @@
+---
+machine_type: 'n1-standard-1'
+image: 'centos-7-v20170918'
+zone: 'us-east1-b'
+host_prefix: 'cf'
+labels:
+  carlos: ''
+firewall_tag: 'opdk_ssh'
+default_firewall_tags:
+- 'default-zkrxups2f6ccnycpl3bokiut'

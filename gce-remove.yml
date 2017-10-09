@@ -1,0 +1,18 @@
+---
+- name: Remove Instance
+  hosts: localhost
+  connection: local
+
+  vars_files:
+  - gce-properties.yml
+
+  tasks:
+  - name: Remove instance
+    gce:
+      instance_names: "{{ instance_names }}"
+      zone: "{{ zone }}"
+      project_id: "{{ project_id }}"
+      service_account_email: "{{ service_account_email }}"
+      credentials_file: '{{ credentials_file }}'
+      state: deleted
+    register: gce
