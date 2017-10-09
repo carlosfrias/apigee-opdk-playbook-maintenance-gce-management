@@ -3,6 +3,12 @@
   hosts: localhost
   connection: local
 
+  vars:
+    service_account: "{{ lookup('file', credentials_file) }}"
+    ssh_private_key: "{{ service_account['private_key'] }}"
+    project_id: "{{ service_account['project_id'] }}"
+    service_account_email: "{{ service_account['client_email'] }}"
+
   vars_files:
   - gce-properties.yml
 
