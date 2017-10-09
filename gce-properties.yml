@@ -1,4 +1,5 @@
 ---
+credentials_file: ~/.ansible/access/default-service-account.json
 machine_type: 'n1-standard-1'
 image: 'centos-7-v20170918'
 zone: 'us-east1-b'
