@@ -2,6 +2,7 @@
 - name: Remove Instance
   hosts: localhost
   connection: local
+  strategy: free
 
   vars:
     service_account: "{{ lookup('file', credentials_file) }}"
