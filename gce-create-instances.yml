@@ -3,6 +3,7 @@
   hosts: localhost
   connection: local
   gather_facts: no
+
   vars:
     credentials_file: "{{ sa_json_file }}"
     service_account: "{{ lookup('file', credentials_file) }}"
