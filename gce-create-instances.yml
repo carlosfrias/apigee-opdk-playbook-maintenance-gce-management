@@ -28,6 +28,7 @@
       credentials_file: '{{ credentials_file }}'
       state: present
       tags: "{{ default_firewall_tags }}"
+      metadata: '{}'
     register: gce
 
 #  - name: Create firewall rule
