@@ -1,8 +1,8 @@
 ---
 credentials_file: ~/.apigee-secure/default-service-account.json
 machine_type: 'n1-standard-1'
-#image: 'centos-7-v20170918'
-image: 'centos-7-v20160511'
+image: 'centos-7-v20170918'
+#image: 'centos-7-v20160511'
 #image: 'centos-6-v20170918'
 zone: 'us-east1-b'
 host_prefix: 'cf'
