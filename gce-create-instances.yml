@@ -28,7 +28,7 @@
       credentials_file: '{{ credentials_file }}'
       state: present
       tags: "{{ default_firewall_tags }}"
-      metadata: "{ 'startup-script': 'sudo echo 'Defaults \!requiretty' >> /etc/sudoers.d/remove-requiretty' }"
+      metadata: "{ 'startup-script': 'sudo echo \'Defaults \!requiretty\' >> /etc/sudoers.d/remove-requiretty' }"
     register: gce
 
 #  - name: Create firewall rule
