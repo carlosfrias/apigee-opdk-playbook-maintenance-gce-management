@@ -28,7 +28,7 @@
       credentials_file: '{{ credentials_file }}'
       state: present
       tags: "{{ default_firewall_tags }}"
-      metadata: '{ startup-script: sudo sed -i "s/^.*requiretty/Defaults !requiretty/" /etc/sudoers }'
+      metadata: "{ 'startup-script': 'sudo sed -i \"s/^.*requiretty/Defaults !requiretty/\" /etc/sudoers' }"
     register: gce
 
 #  - name: Create firewall rule
