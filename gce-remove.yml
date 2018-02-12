@@ -22,4 +22,3 @@
       service_account_email: "{{ service_account_email }}"
       credentials_file: '{{ credentials_file }}'
       state: deleted
-    register: gce
