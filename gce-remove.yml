@@ -16,13 +16,10 @@
   tasks:
   - name: Remove instance
     gce:
-      instance_names: "{{ item }}"
+      instance_names: "{{ instance_names }}"
       zone: "{{ zone }}"
       project_id: "{{ project_id }}"
       service_account_email: "{{ service_account_email }}"
       credentials_file: '{{ credentials_file }}'
       state: deleted
-    with_items: "{{ instance_names | split(',') }}"
-    async: 45
-    poll: 0
 
