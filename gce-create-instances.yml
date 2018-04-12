@@ -22,6 +22,7 @@
       num_instances: "{{ num_instances | default(1) }}"
       machine_type: "{{ machine_type }}"
       image: "{{ image }}"
+      disk_size: "{{ disk_size }}"
       zone: "{{ zone }}"
       project_id: "{{ project_id }}"
       service_account_email: "{{ service_account_email }}"
