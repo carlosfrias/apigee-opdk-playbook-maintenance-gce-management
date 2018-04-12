@@ -15,7 +15,7 @@
   - gce-properties.yml
 
   tasks:
-  - name: Launch instances
+  - name: Launch instances using image
     tags: ['launch']
     gce:
       name: "{{ host_prefix }}"
@@ -33,7 +33,7 @@
     register: gce
     when: image_family is not defined
 
-  - name: Launch instances
+  - name: Launch instances using image_family
     tags: ['launch']
     gce:
       name: "{{ host_prefix }}"
