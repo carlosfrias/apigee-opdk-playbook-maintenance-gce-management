@@ -21,6 +21,24 @@
       name: "{{ host_prefix }}"
       num_instances: "{{ num_instances | default(1) }}"
       machine_type: "{{ machine_type }}"
+      image: "{{ image }}"
+      disk_size: "{{ disk_size }}"
+      zone: "{{ zone }}"
+      project_id: "{{ project_id }}"
+      service_account_email: "{{ service_account_email }}"
+      credentials_file: '{{ credentials_file }}'
+      state: present
+      tags: "{{ default_firewall_tags }}"
+      metadata: "{ 'startup-script': 'rm -f /etc/sudoers.d/remove-requiretty && echo \"Defaults !requiretty\" >> /etc/sudoers.d/remove-requiretty' }"
+    register: gce
+    when: image_family is not defined
+
+  - name: Launch instances
+    tags: ['launch']
+    gce:
+      name: "{{ host_prefix }}"
+      num_instances: "{{ num_instances | default(1) }}"
+      machine_type: "{{ machine_type }}"
       image_family: "{{ image_family }}"
       external_projects: "{{ external_projects }}"
       disk_size: "{{ disk_size }}"
@@ -32,6 +50,7 @@
       tags: "{{ default_firewall_tags }}"
       metadata: "{ 'startup-script': 'rm -f /etc/sudoers.d/remove-requiretty && echo \"Defaults !requiretty\" >> /etc/sudoers.d/remove-requiretty' }"
     register: gce
+    when: image_family is defined and external_projects is defined
 
 #  - name: Create firewall rule
 #    tags: ['firewall']
