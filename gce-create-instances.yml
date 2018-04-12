@@ -21,7 +21,7 @@
       name: "{{ host_prefix }}"
       num_instances: "{{ num_instances | default(1) }}"
       machine_type: "{{ machine_type }}"
-      image: "{{ image }}"
+      image_family: "{{ image_family }}"
       disk_size: "{{ disk_size }}"
       zone: "{{ zone }}"
       project_id: "{{ project_id }}"
