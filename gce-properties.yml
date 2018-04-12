@@ -21,4 +21,4 @@ firewall_tag: 'opdk_ssh'
 default_firewall_tags:
 - 'default-zkrxups2f6ccnycpl3bokiut'
 
-external_projects: 'eip-images'
+#external_projects: 'eip-images'
