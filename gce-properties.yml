@@ -6,14 +6,18 @@ disk_size: 50
 #machine_type: 'n1-standard-8'
 #machine_type: 'n1-standard-4'
 machine_type: 'n1-standard-2'
-#image: 'centos-7-v20180104'
+
 #image_family: 'centos-7-drawfork'
 #image_family: 'centos-7-drawfork-v20180327'
+external_projects: 'eip-images'
+
 image: 'centos-7'
 #image: 'centos-7-v20180327'
+#image: 'centos-7-v20180104'
 #image: 'centos-7-v20170918'
 #image: 'centos-7-v20160511'
 #image: 'centos-6-v20170918'
+
 zone: 'us-east1-b'
 host_prefix: 'cf'
 labels:
@@ -22,4 +26,3 @@ firewall_tag: 'opdk_ssh'
 default_firewall_tags:
 - 'default-zkrxups2f6ccnycpl3bokiut'
 
-#external_projects: 'eip-images'
