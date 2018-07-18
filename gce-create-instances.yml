@@ -55,8 +55,9 @@
   - name: Create firewall rule
     tags: ['firewall']
     gce_net:
+      name: default
       state: present
-      fwname: opdk-ssh
+      fwname: dev-test
       src_range: ['0.0.0.0/0']
       target_tags: ["{{ firewall_tag }}"]
       allowed: tcp:8080

@@ -25,4 +25,4 @@ labels:
 firewall_tag: 'opdk_ssh'
 default_firewall_tags:
 - 'default-zkrxups2f6ccnycpl3bokiut'
-
+- "{{ firewall_tag }}"
