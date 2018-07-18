@@ -52,18 +52,18 @@
     register: gce
     when: image_family is defined and external_projects is defined
 
-#  - name: Create firewall rule
-#    tags: ['firewall']
-#    gce_net:
-#      state: present
-#      fwname: opdk-ssh
-#      src_range: ['0.0.0.0/0']
-#      target_tags: ["{{ firewall_tag }}"]
-#      allowed: tcp:22
-#      mode: auto
-#      project_id: "{{ project_id }}"
-#      service_account_email: "{{ service_account_email }}"
-#      credentials_file: '{{ credentials_file }}'
+  - name: Create firewall rule
+    tags: ['firewall']
+    gce_net:
+      state: present
+      fwname: opdk-ssh
+      src_range: ['0.0.0.0/0']
+      target_tags: ["{{ firewall_tag }}"]
+      allowed: tcp:8080
+      mode: auto
+      project_id: "{{ project_id }}"
+      service_account_email: "{{ service_account_email }}"
+      credentials_file: '{{ credentials_file }}'
 
 #  - name: Bind firewall rule to instances
 #    tags: ['bind']
