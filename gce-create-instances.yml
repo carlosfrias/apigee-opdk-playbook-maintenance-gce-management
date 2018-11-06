@@ -5,7 +5,6 @@
   gather_facts: no
 
   vars:
-    credentials_file: "{{ sa_json_file }}"
     service_account: "{{ lookup('file', credentials_file) }}"
     ssh_private_key: "{{ service_account['private_key'] }}"
     project_id: "{{ service_account['project_id'] }}"
@@ -15,6 +14,8 @@
   - gce-properties.yml
 
   tasks:
+
+
   - name: Launch instances using image
     tags: ['launch']
     gce:
