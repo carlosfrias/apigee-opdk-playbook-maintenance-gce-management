@@ -15,7 +15,6 @@
 
   tasks:
 
-
   - name: Launch instances using image
     tags: ['launch']
     gce:
