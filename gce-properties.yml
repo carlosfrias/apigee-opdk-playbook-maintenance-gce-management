@@ -1,5 +1,5 @@
 ---
-credentials_file: ~/.apigee-secure/default-service-account.json
+credentials_file: ~/.apigee-secure/edge-ops-lab-default-service-account.json
 disk_size: 50
 #machine_type: 'n1-highmem-8'
 #machine_type: 'n1-standard-32'
