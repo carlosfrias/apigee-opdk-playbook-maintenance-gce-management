@@ -34,7 +34,8 @@
   - name: Check remove status
     async_status:
       jid: "{{ gcp_task.ansible_job_id }}"
-    loop_control: "{{ gcp_tasks.results }}"
+    loop: "{{ gcp_tasks.results }}"
+    loop_control:
       loop_var: "gcp_task"
     register: gcp_task_results
     until: gcp_task_results.finished
