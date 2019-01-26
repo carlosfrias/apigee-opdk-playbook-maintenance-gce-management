@@ -27,7 +27,7 @@
       credentials_file: '{{ credentials_file }}'
       state: deleted
     with_items: "{{ gcp_hostname }}"
-    async: 120
+    async: 300
     poll: 0
     register: gcp_tasks
 
