@@ -28,7 +28,7 @@
       state: deleted
     with_items: "{{ gcp_hostname }}"
     async: 120
-    poll: 5
+    poll: 0
     register: gcp_tasks
 
   - name: Check remove status
