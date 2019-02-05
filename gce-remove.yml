@@ -27,16 +27,16 @@
       credentials_file: '{{ credentials_file }}'
       state: deleted
     with_items: "{{ gcp_hostname }}"
-    async: 300
+    async: 0
     poll: 0
-    register: gcp_tasks
+#    register: gcp_tasks
 
-  - name: Check remove status
-    async_status:
-      jid: "{{ gcp_task.ansible_job_id }}"
-    loop: "{{ gcp_tasks.results }}"
-    loop_control:
-      loop_var: "gcp_task"
-    register: gcp_task_results
-    until: gcp_task_results.finished
-    retries: 30
+#  - name: Check remove status
+#    async_status:
+#      jid: "{{ gcp_task.ansible_job_id }}"
+#    loop: "{{ gcp_tasks.results }}"
+#    loop_control:
+#      loop_var: "gcp_task"
+#    register: gcp_task_results
+#    until: gcp_task_results.finished
+#    retries: 30
