@@ -1,6 +1,6 @@
 ---
 credentials_file: ~/.apigee-secure/edge-ops-lab-default-service-account.json
-disk_size: 50
+disk_size: 50G
 #machine_type: 'n1-highmem-8'
 #machine_type: 'n1-standard-32'
 #machine_type: 'n1-standard-8'
