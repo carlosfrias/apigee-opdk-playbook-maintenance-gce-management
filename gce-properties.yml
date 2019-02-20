@@ -1,5 +1,5 @@
 ---
-credentials_file: ~/.apigee-secure/edge-ops-lab-default-service-account.json
+credentials_file: ~/.apigee-secure/edge-ops-lab-e7a48eec6f40.json
 disk_size: 50G
 machine_type: 'n1-standard-2'
 external_projects: 'eip-images'
