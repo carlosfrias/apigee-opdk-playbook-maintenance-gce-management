@@ -55,7 +55,7 @@ pytz==2013.7
 PyYAML==3.12
 query-string==0.0.8
 requests==2.20.0
-rsa==3.2
+rsa==4.7
 s3transfer==0.1.10
 scipy==0.19.1
 shellescape==3.4.1
